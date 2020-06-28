@@ -1,17 +1,16 @@
-function add(n1: number, n2: number, showResult: boolean) {
-  // return n1 + n2;
+const person = {
+  name: 'Jenna',
+  age: 31,
+  hobbies: ['Coding', 'Baking', 'Reading']
+};
 
-  if(showResult) {
-    console.log(n1 + n2);
-  } else {
-    return n1 + n2
-  }
+let favoriteActivities: string[];
+// can't assign string 'Baking' because hobbies is a string array
+// favoriteActivities = 'Baking';
+favoriteActivities = ['Baking'];
+
+console.log(person.name);
+
+for (const hobby of person.hobbies) {
+  console.log(hobby);
 }
-
-const number1 = 5;
-const number2 = 2.8;
-
-const printResult = true;
-
-const result = add(number1, number2, printResult);
-console.log(result);
