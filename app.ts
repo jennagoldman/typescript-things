@@ -1,16 +1,16 @@
-const person = {
-  name: 'Jenna',
-  age: 31,
-  hobbies: ['Coding', 'Baking', 'Reading']
+function combine(input1: number | string, input2: number | string) {
+  let result;
+  if(typeof input1 === 'number' && typeof input2 === 'number') {
+    result = input1 + input2;
+  }
+  else {
+    result = input1.toString() + input2.toString();
+  } 
+  return result
 };
 
-let favoriteActivities: string[];
-// can't assign string 'Baking' because hobbies is a string array
-// favoriteActivities = 'Baking';
-favoriteActivities = ['Baking'];
+const combineAges = combine(30, 5);
+console.log(combineAges);
 
-console.log(person.name);
-
-for (const hobby of person.hobbies) {
-  console.log(hobby);
-}
+const combineNames = combine('Max', 'Anna');
+console.log(combineNames);
